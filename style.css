@@ -8,11 +8,43 @@ body {
 .container > div{ 
     border-radius: 5px;
 padding: 10px;
-background-color: rgb(207,232,220);
+background-color: rgba(252, 252, 252, 0.678);
 border: 2px solid rgb(79,185,227);
 text-align: center;
-/* margin: auto; */
+margin: auto;
 }
+
+
+.container > a{ 
+    border-radius: 5px;
+padding: 10px;
+background-color: rgba(252, 252, 252, 0.678);
+border: 2px solid rgb(79,185,227);
+text-align: center;
+margin: auto;
+}
+
+a{
+    display: block;
+    text-align: center;
+    margin: 0;
+    text-decoration: none;
+    transition: 1s;
+}
+
+a:hover {
+    background-color:rgba(255, 192, 203, 0.658);
+    animation: pulse 1.5s linear infinite;
+}
+
+a:active{
+    background-color: rgba(255, 192, 203, 0.959);
+}
+
+a:after{
+    background-color: grey;
+}
+
 
 .container{
     display:grid;
@@ -21,4 +53,22 @@ text-align: center;
     grid-auto-rows: minmax(100px, auto);
     gap: 20px;
     /* adds 3 200px columns */
+}
+
+
+@keyframes pulse{
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(105, 101, 101, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(175, 154, 154, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(85, 79, 79, 0);
+    }
 }
