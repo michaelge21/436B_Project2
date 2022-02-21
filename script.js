@@ -8,4 +8,5 @@ function remove() {
 
     var friend = document.getElementById("friend");
     friend.innerHTML = "bro did... did you just delete my friend?"
+    friend.style.backgroundImage = "url('Sad_Face_Emoji_large.png')";
 }
